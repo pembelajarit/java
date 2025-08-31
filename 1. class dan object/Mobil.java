@@ -6,11 +6,15 @@ public class Mobil{
     void maju(){
         System.out.println("Mobil " + merk + " warna "+ warna + " Tahun " + tahun + " bergerak maju");
     } 
-    void mundur(){
+    public void mundur(){
         System.out.println("Mobil " + merk + " warna "+ warna + " Tahun " + tahun + " bergerak mundur");
     }
 
+    public static void companyInfo(){
+        System.out.println("Semua mobil diproduksi di luar negeri");
+    }
     public static void main(String[] args) {
+        Mobil.companyInfo();
         Mobil myMobil = new Mobil();
 
         myMobil.maju();
