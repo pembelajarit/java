@@ -23,5 +23,7 @@ public class Mobil{
         myMobil.merk = "Mercedes";
         myMobil.warna = "Merah";
         myMobil.maju();
+
+        System.out.println("Tipe data myMobil.warna adalah: " + ((Object)myMobil.warna).getClass().getSimpleName());
     }
 }

@@ -90,6 +90,8 @@ public class Variables{
         v2.staticVar = 15;
         System.out.println(v1.staticVar);
         System.out.println(v2.staticVar);        
+
+        
     }
 }
 
