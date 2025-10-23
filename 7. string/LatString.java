@@ -51,7 +51,7 @@ public class LatString {
         // Performance Comparison
         long startTime = System.nanoTime();
         StringBuilder sb3 = new StringBuilder();
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000000; i++) {
             sb3.append(i);
         }
         long endTime = System.nanoTime();
@@ -59,7 +59,7 @@ public class LatString {
 
         startTime = System.nanoTime();
         StringBuffer sbf = new StringBuffer();
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000000; i++) {
             sbf.append(i);
         }
         endTime = System.nanoTime();
