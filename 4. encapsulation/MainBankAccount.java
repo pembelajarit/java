@@ -1,6 +1,7 @@
 // Contoh program Java sederhana dengan konsep encapsulation
 // Studi kasus: Data rekening bank
-
+import java.text.NumberFormat;
+import java.util.Locale;
 class BankAccount {
     // Data disembunyikan (private)
     private String accountNumber;
@@ -44,9 +45,12 @@ class BankAccount {
 
 public class MainBankAccount {
     public static void main(String[] args) {
+        NumberFormat currencyFormat = NumberFormat.getNumberInstance(new Locale("id", "ID"));
+        currencyFormat.setMaximumFractionDigits(2);
+
         BankAccount account = new BankAccount("1234567890", "Budi", 1000000);
         System.out.println("Nama Pemilik: " + account.getOwnerName());
-        System.out.println("Saldo Awal: Rp" + account.getBalance());
+        System.out.println("Saldo Awal: Rp" + currencyFormat.format(account.getBalance()));
 
         account.deposit(500000);
         System.out.println("Setelah setor: Rp" + account.getBalance());

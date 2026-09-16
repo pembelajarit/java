@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 class Person {
     private String name;
     private int age;
@@ -49,6 +51,11 @@ class BankAccount {
 
 public class Main {
     public static void main(String[] args){
+        DecimalFormatSymbols simbol = new DecimalFormatSymbols();
+        simbol.setGroupingSeparator('.');
+        simbol.setDecimalSeparator(',');
+        DecimalFormat df = new DecimalFormat("#,###", simbol);
+
         Person p1 = new Person();
         p1.setName("Andi");
         // p1.name = "Jono";
@@ -58,6 +65,6 @@ public class Main {
         BankAccount a1 = new BankAccount();
         a1.deposit(1000000);
         a1.withdraw(200000);
-        System.out.println(a1.getBalance());
+        System.out.println("Rp."+df.format(a1.getBalance()));
     }
 }
