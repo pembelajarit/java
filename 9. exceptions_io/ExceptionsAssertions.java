@@ -6,6 +6,14 @@ class MyCustomException extends Exception {
 
 public class ExceptionsAssertions {
     public static void main(String[] args) {
+        // int[] angka = {1, 2, 3};
+        // System.out.println(angka[4]);
+
+        // int x = 7, y =0;
+        // System.out.println("sebelum pembagian");
+        // int hasil = x/y;
+        // System.out.println("hasil: " + hasil);
+
         try {
             int[] angka = {1,2,3};
             System.out.println(angka[2]);
@@ -23,6 +31,13 @@ public class ExceptionsAssertions {
             // System.out.println("Error: " + e.getMessage());
         } finally {
             System.out.println("Eksekusi selesai");
+        }
+
+        int waktu = 8;
+        if (waktu > 7){
+            throw new ArithmeticException("anda terlambat, tidak diizinkan masuk");
+        } else {
+            System.out.println("tidak terlambat");
         }
 
         ExceptionsAssertions demo = new ExceptionsAssertions();
